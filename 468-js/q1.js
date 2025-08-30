@@ -1,0 +1,45 @@
+// diffrent ways of creating objects
+// 1
+let user = {
+  name: "John Doe",
+  age: 30,
+  city: "New York",
+};
+
+console.log(user);
+
+// 2 . constructor function
+let user2 = new Object();
+user2.age = "24";
+user2.occupation = "Business";
+console.log(user2);
+
+// 3 . create method
+
+let user3 = Object.create(user);
+console.log(user3);
+user3.name = "Lavda";
+console.log(user3.age);
+
+console.log(user3);
+
+// 4 . fucntion constructor
+
+function userObj(age, company) {
+  this.age = age;
+  this.company = company;
+}
+
+const user4 = new userObj(21, "Atlassian");
+console.log(user4);
+
+// function constructor with prototype
+
+function Person() {}
+Person.prototype.name = "Aries";
+var object = new Person();
+
+// object assign method
+
+const user5 = Object.assign({ height: "6'2" }, user);
+console.log(user5);
